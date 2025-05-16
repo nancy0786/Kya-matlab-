@@ -3,7 +3,7 @@ from telegram import (
 )
 from telegram.ext import (
     ApplicationBuilder, ChatJoinRequestHandler, CommandHandler,
-    CallbackQueryHandler, MessageHandler, ContextTypes, filters
+    CallbackQueryHandler, MessageHandler, ContextTypes, filters as Filters
 )
 from telegram.constants import ParseMode
 from fpdf import FPDF
@@ -200,6 +200,6 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("setmsg", setmsg))
 app.add_handler(CallbackQueryHandler(group_selection_callback))
 app.add_handler(CommandHandler("useradded", useradded))
-app.add_handler(MessageHandler(filters.TEXT & filters.PRIVATE, save_custom_message))
+app.add_handler(MessageHandler(filters.TEXT & filters.ChatType.PRIVATE, save_custom_message))
 
 app.run_polling()
