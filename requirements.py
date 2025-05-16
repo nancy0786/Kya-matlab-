@@ -1,3 +1,4 @@
 python-telegram-bot==20.8
 fpdf
 pandas
+python-telegram-bot
