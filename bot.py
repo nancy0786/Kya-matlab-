@@ -3,7 +3,7 @@ from telegram import (
 )
 from telegram.ext import (
     ApplicationBuilder, ChatJoinRequestHandler, CommandHandler,
-    CallbackQueryHandler, MessageHandler, ContextTypes, filters as Filters
+    CallbackQueryHandler, MessageHandler, ContextTypes, filters 
 )
 from telegram.constants import ParseMode
 from fpdf import FPDF
